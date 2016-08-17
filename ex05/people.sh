@@ -1,0 +1,1 @@
+ldapsearch -h "ldap.forumsys.com" -D "uid=tesla,dc=example,dc=com" -w password -b "dc=example,dc=com" -LLL "(objectClass=inetOrgPerson)" uid | grep -v dn: | grep uid | sort -f -r | cut -d: -f2 | cut -d " " -f2
